@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>링크와 이미지넣기</title>
+    </head>
+    <body>
+        <!--링크와 이미지 넣기-->
+        <!--링크는 내부의 특정 위치 또는 외부의 다른문서와 연결 하는 것-->
+        <!--링크이동-->
+        <!--필수 href  타이틀(마우스 올렸을 때 나오는 주석)과 타겟은 없어도 가능함-->
+        <!--a 태그 target 속성 디플트는 셀프 _self (현재창) _blank(새창)-->
+        <a href="https://www.naver.com" title="누르면 네이버!" target="_blank">쿠팡 같은 네이버</a> 
+        <br>
+        <a href="https://www.coupang.com/" title="이건 쿠팡이야!" target="_blank">네이버 같은 쿠팡</a>
+        
+        <br>
+        <br>
+        <!--이미지 태그-->
+        <!--src = "이미지 경로" 필수 속성-->
+        <!---alt - "이미지 설명" 필수 속성-->
+        <img src="sample.jpg" alt="농심 신라면! To움바!"> <!--동일 경로 이미지-->
+        <br>
+        <img src="images/sample2.jpg" alt="달디단 옥수수"> <!--하위 폴더 images 내부에 존재-->
+        <br> <!--./ 은 현재 경로-->
+        <img src="../../images/catt.jpeg" alt="당근당근당근당근"> <!--../ 를 사용하여 상위폴더로 이동-->
+        <br>
+        <!-- 이미지 주소 복사-->
+        <!-- 외부 이미지 주소 링크 복사-->
+        <img src="https://cdn.pixabay.com/photo/2024/02/05/10/48/bird-8554204_1280.jpg" alt="외부 이미지">
+    </body>
+</html>
