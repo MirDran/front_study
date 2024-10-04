@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 조합 선택자 그룹 ,으로 구분 ex) tag08 표만들기 */
+        /* 그룹 선택자 */
+        p,
+        strong {
+            color: red;
+        }
+
+        /* 자식 선택자 선택자 범위를 자식으로 제한 구분자 > */
+        .top-div>p {
+            color: blue;
+        }
+
+        /* 하위 선택자 자손까지 구분자 공백 
+        .top-div span {
+            color: green;
+        } */
+
+        /* 인접 형제 선택자 구분자 + 
+        p + span {
+            color : orange;
+        } */
+
+        /* 일반 형제 선택자 구분자 ~*/
+        p~span {
+            color: orange;
+        }
+
+        /* 가상 요소 선택지 가상이라 드래그 선택이 불가 */
+        #vr-p::before {
+            content: "*";
+            color: aqua;
+        }
+
+        #vr-p::after {
+            content: "...";
+            color: gold;
+        }
+
+        /* 가상 클래스 선택자 한번도 방문 X :ling 한번이상 : visited*/
+        a:link {
+            color: brown;
+        }
+
+        a:visited {
+            color: lime;
+        }
+        /* hover 마우스 올렸을 때  active 마우스 클릭 했을 때 */
+        a:hover{
+            color:red;
+        }
+
+        a:active{
+            color:blue;
+        }
+
+        /* 입력 요소 가상 클래스 선택자 */
+
+        input:focus{
+            color:gray;
+        }
+
+        input:disabled{
+            color:rgb(52, 199, 71);
+        }
+        /*
+        input[type="checkbox"]:checked{
+
+        }*/
+        
+        .chk-test:checked + span {
+            color: red;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <a href="https://www.thevc.kr"> 안가본 사이트</a> <br>
+
+    <a href="https://www.clien.net">안가본사이트2</a>
+
+    <br><br>
+
+    <input type="text" value="input1"><br>
+    <input type="text" value="input2" disabled><br>
+    <br>
+
+    <input type="checkbox" class="chk-test"><span>출근</span> <br>
+    <input type="checkbox" class="chk-test"><span>퇴근</span> <br>
+
+    <div class="top-div">
+        <p>p1</p>
+        <p>p2</p>
+        <span>span1</span>
+        <span>span2</span>
+
+
+        <div>
+            <p>p3</p>
+            <p id="vr-p">p4</p>
+            <strong>strong</strong>
+            <span>span3</span>
+        </div>
+    </div>
+
+    <div>
+        <strong>strong2</strong>
+        <span>span4</span>
+    </div>
+
+    <p>p5</p>
+
+</body>
+
+</html>
