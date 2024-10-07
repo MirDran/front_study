@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스 모델 사이즈</title>
+    <style>
+        .box1 {
+            margin: 30px;
+            border: 2px double blue;
+            padding: 5px;
+            width: 200px;
+            height: 100px;
+
+            display:inline-block;
+        }
+
+        .box2{
+            margin:50px 15px;
+            border-width: 2px;
+            border-style: outset;
+            border-color:blue;
+            padding: 10px 3px;
+            width: 200px;
+            height:100px;
+            box-sizing: border-box;
+
+            display:inline-block;
+        }
+
+        /*  
+            display 속성
+            block       : 한 줄 차지 (가로줄), 줄바꿈이 일어남, 사이즈(width/height) 적용, 여백도 적용
+            inline      : 내용 공간만큼만 차지, 같은 줄에 배치 가능, 사이즈 적용 불가, 여백은 가로만 적용
+            inlie-block : block 처럼 속성 적용(사이즈, 여백), 요소들 간의 상호작용 inline취급 (같은 줄 배치)
+            none <- 표시X (숨김)
+        */
+
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <span>스팬</span>
+    <strong>스트롱</strong>
+</body>
+
+</html>
