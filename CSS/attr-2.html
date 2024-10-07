@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글꼴</title>
+
+    <style>
+        .font {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 50px;
+            font-variant: small-caps;
+        }
+
+        .font-box {
+            font-size: 24px;
+        }
+
+        .p2-inbox {
+            font-size: 1.5em;
+            /* 부모요소 크기 1.5배 em = 배수 */
+            font-style: italic;
+            text-align: right;
+            text-decoration: overline;
+        }
+
+        .p3-inbox {
+            font-size: 1.5rem;
+            /* html 기준 크기 배수 디폴트 html크기 16px */
+            font-weight: 700;
+            /* 글씨 굵게 100-900까지 normal 400 bold 700 */
+            font-style: oblique;
+            text-align: center;
+            text-decoration: line-through;
+        }
+
+        .del{
+            text-decoration: line-through;
+        }
+
+        .ins{
+            text-decoration: underline;
+            letter-spacing: 50%; /* 자간 */
+            line-height: 2em; /* 높이 */
+        }
+        /* %(상위 속성값에 따른 상대적 크기) em(부모 텍스트크기) rem(HTML 텍스트 크기) vw vh */
+    </style>
+</head>
+
+<body>
+    <p>기존 기본 텍스트</p>
+    <p class="font">P text test</p>
+    <p class="font">글자 테스트</p>
+
+    <div class="font-box">
+        <p>박스안에 글자</p>
+        <p class="p2-inbox">박스안에 글자2</p>
+        <p class="p3-inbox">박스안에 글자3</p>
+        <span class="del">del span</span>
+        <span class="ins">ins span</span>
+
+    </div>
+</body>
+
+</html>
