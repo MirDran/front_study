@@ -63,13 +63,19 @@
 
         /* 입력 요소 가상 클래스 선택자 */
 
+        input:enabled{
+            color:hotpink;
+        }
+
         input:focus{
-            color:gray;
+            color:red;
         }
 
         input:disabled{
             color:rgb(52, 199, 71);
         }
+
+        
         /*
         input[type="checkbox"]:checked{
 
@@ -77,6 +83,10 @@
         
         .chk-test:checked + span {
             color: red;
+        }
+
+        label{
+            color:violet;
         }
 
 
@@ -92,10 +102,13 @@
 
     <input type="text" value="input1"><br>
     <input type="text" value="input2" disabled><br>
+    <input type="text" value="input3"><br>
     <br>
 
     <input type="checkbox" class="chk-test"><span>출근</span> <br>
     <input type="checkbox" class="chk-test"><span>퇴근</span> <br>
+
+    <label><input type="checkbox">야근</label>
 
     <div class="top-div">
         <p>p1</p>
