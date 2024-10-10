@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        
+/*
+        .container {
+            width: 600px;
+            border: 1px solid black;
+            position: relative;
+        }
+
+        .left-box {
+            width: 300px;
+            border: 1px solid black;
+            display: inline-block;
+        }
+
+        .right-box {
+            width: 300px;
+            border: 1px solid black;
+            display: inline-block;
+            position: absolute;
+        }
+
+        .imgs {
+            width: 150px;
+            float: left;
+
+        }
+
+        .imgs2 {
+            width: 150px;
+            float: left;
+        }*/
+        .container{
+            width: 600px;
+            margin:0 auto;
+        }
+
+        .container::after{
+            content:"";
+            display: block;
+            clear: both;
+        }
+
+        .box{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            float: left;
+            background-color: lightgray;
+        }
+
+        .box-imge{
+            width: 150px;
+            float: left;
+        }
+        /* .container .box img {} 가능 */ 
+    </style>
+
+</head>
+
+<body>
+<!--
+    <div class="container">
+        <div class="left-box">
+            <div class="imgs"><img src="../../HTML/tag/sample.jpg" alt="라면"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias ipsum iste fugiat nesciunt, repellat
+                culpa assumenda animi enim minima reiciendis quidem dolorem mollitia excepturi molestiae suscipit dicta
+                pariatur at? Maxime.</p>
+        </div>
+
+
+        <div class="right-box">
+            <div class="imgs2"><img src="../../HTML/tag/sample.jpg" alt="라면"></div>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis est ratione voluptatem itaque eum
+                recusandae inventore sequi quasi vitae excepturi distinctio beatae laboriosam eos vero, impedit ducimus
+                reprehenderit tempore ex.</p>
+        </div>
+    </dvi>
+*/
+-->
+
+    <div class="container">
+        <div class="box">
+            <img src="../../HTML/tag/sample.jpg" class="box-imge">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum quis, natus, reiciendis aliquam impedit animi nisi optio, magni enim unde quibusdam! Ipsam aspernatur temporibus ex itaque possimus. Provident, ipsa ut!
+        </div>
+        <div class="box">
+            <img src="../../HTML/tag/sample.jpg" class="box-imge">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum, et! Perspiciatis aperiam fugiat facilis autem natus quis excepturi reiciendis hic, aut, optio dolorem mollitia quos quas itaque quod quo ex?
+        </div>
+    </div>
+
+</body>
+
+</html>
