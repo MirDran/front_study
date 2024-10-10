@@ -19,32 +19,66 @@
 
         .green-box {
             background-color: green;
-            float:left;
+            float: left;
         }
 
         .blue-box {
             background-color: blue;
-            float:left;
+            float: left;
         }
 
-        .next{
+        .next {
             width: 200px;
             height: 200px;
             background-color: gray;
         }
 
+        .black-box{
+            border: 2px dashed black;
+            display: inline-block;
+        }
+
+        .clear-box{
+            clear: left;
+            background-color: lightblue;
+        }
+
+        .container::after{
+            content:""; /* content가 없으면 동작을 안함 */
+            display: block; /* 기본 content는 인라인 (텍스트) 그래서 블럭으로 변경 */
+            clear: both; /* 앞의 float에 따라 left right구별, 안할 때는 both; 목적에 따라 both;가 편함 */
+        }
     </style>
 
 </head>
 
 <body>
-<div class="container">
-    <div class="box red-box"></div>
-    <div class="box green-box"></div>
-    <div class="box blue-box"></div>
-</div> <!--flaot는 공중에는 뜨나 컨테이너 같은곳은 내부에서 길이를 확인 못함-->
+
+    <div class="box black-box">
+    </div><div class="box black-box">
+    </div><div class="box black-box">
+    </div>
+    <!--div 한줄로 해서 엔터 칠 경우 각 간격이 생김 끝을 다음으로 인식하게 하여 붙이기 인라인블록 기준-->
+
+
+
+    <div class="container">
+        <div class="box red-box"></div>
+        <div class="box green-box"></div>
+        <div class="box blue-box"></div>
+        <!-- <div class="box clear-box"></div> -->
+    </div> <!--flaot는 공중에는 뜨나 컨테이너 같은곳은 내부에서 길이를 확인 못함-->
 
     <div class="next"></div>
+
+    <!--
+        float 로 공간인식 안될 때
+        1. 임의의 크기 인식되는 요소를 추가
+        2. clear 사용
+            1) 마지막 요소 clear
+            2) 가상요소 선택자 clear .container
+    -->
+
 </body>
 
 </html>

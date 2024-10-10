@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>align</title>
+
+    <style>
+        /*
+            가운데 정렬
+            1. margin: 0 auto;
+                block 요소 대상 적용 : 자신이 가운데정렬 (좌우 margin 자동)
+                inline 요소 대상 적용 : X 
+
+            2. text-align: center; (상속 가능)
+                block 요소 대상 적용 : 내부 컨텐츠 요소 가운데 정렬 -> 정렬 대상 : 내부
+                inline 요소 대상 적용 : X
+        */
+
+        p {
+            text-align: center;
+        }
+
+        span {
+            text-align: center;
+        }
+
+        .out-box {
+            margin: 0 auto;
+            /* 본인(박스)이 가운데로 */
+            width: 600px;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        .inner-box {
+            margin: 0 auto;
+            /* 내부요소(콘텐츠) 가운데 */
+            width: 400px;
+            border: 1px solid red;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <p>p 정렬</p>
+    <span>span 정렬</span>
+
+
+    <div class="out-box">
+        <p>p태그 outbox</p>
+        <span>span태그 outbox</span>
+
+        <div class="inner-box">
+            <h1>h1태그 inner box</h1>
+            <span>span태그 inner box</span>
+        </div>
+    </div>
+
+</body>
+
+</html>
