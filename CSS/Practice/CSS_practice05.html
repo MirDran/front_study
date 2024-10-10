@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+
+        .container{
+            margin: 0 auto; 
+            width: 500px;
+            text-align: center;
+            margin-top:50px;
+        }
+
+        .container::after{
+            content:"";
+            display:block;
+            clear:both
+        }
+
+        .red-b{
+            background-color: red;
+            width: 50%;
+            height:100px;
+            float: left;
+        }
+        .grb-b{
+            background-color: green;
+            width: 50%;
+            height: 100px;
+            float: left;
+        }
+
+        .br-b{
+            background-color: blue;
+            width: 100%;
+            height: 200px;
+            float:left;
+        }
+
+        .tt-b{
+            text-align: center;
+            width: 100%;
+        }
+
+    </style>
+    
+</head>
+<body>
+    
+    <div class="container">
+        <div class="red-b"></div>
+        <div class="grb-b"></div>
+        <div class="tt-b">글자가운데정렬</div>
+        <div class="br-b"></div>
+    </div>
+
+</body>
+</html>
