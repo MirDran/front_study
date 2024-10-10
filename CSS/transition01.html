@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+
+    <style>
+
+        /* .box:hover{
+            background-color: blue;
+        } */
+        /* 우선수위에 따라 hovrt가 작동 */
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 20px;
+
+            /* transition-property: background-color, width; */
+            transition-property: all;
+            transition-duration: 5s;
+            /* transition-delay: 2s; */
+            /* transition-timing-function: cubic-bezier(0.56, 0.02, 0.15, 0.97); */
+        }
+
+        .box:hover{
+            background-color: blue;
+            width: 300px;
+        }
+        
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
+
+</body>
+</html>
