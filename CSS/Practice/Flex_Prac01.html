@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration-color: white;
+        }
+
+        .container {
+            position: relative;
+            top: 50px;
+            margin: 0 auto;
+            width: 700px;
+            height: 500px;
+            border: 1px solid black;
+            
+        }
+
+        .s-a {
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+        }
+
+        .main {
+            width: 200px;
+            height: 100px;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .my {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .s-b {
+            display: flex;
+            justify-content: flex-start;
+            align-content: center;
+        }
+
+        .or {
+            width: 490px;
+            height: 300px;
+            display: flex;
+            background-color: orange;
+            
+            flex-wrap: wrap;
+            
+            
+            align-content: space-around;
+            
+        }
+
+        .bl1{
+            width: 490px;
+            display: flex;
+            flex-wrap: wrap;
+            
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .bl2{
+            width: 490px;
+            display: flex;
+            flex-wrap: wrap;
+            
+            justify-content: space-around;
+            align-items: center;
+
+        }
+
+        .bl {
+            width: 100px;
+            height: 50px;
+            background-color: black;
+
+            transition-property: all;
+            transition-duration: 2s;
+        }
+
+        .bl:hover {
+            transform: scale(1.5);
+        }
+
+        .gr {
+            width: 210px;
+            height: 300px;
+            display: flex;
+            background-color: green;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .s-c {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bu {
+            width: 700px;
+            height: 100px;
+            background-color: blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .text{
+            color: white;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="s-a">
+            <div class="main"><p class="text">메인메뉴</p></div>
+            <div class="my"><p class="text">마이페이지</p></div>
+        </div>
+        <div class="s-b">
+            <div class="or">
+                <div class="bl1">
+                    <div class="bl"></div>
+                    <div class="bl"></div>
+                    <div class="bl"></div>
+                </div>
+                <div class="bl2">
+                    <div class="bl"></div>
+                    <div class="bl"></div>
+                    <div class="bl"></div>
+                </div>
+            </div>
+            <div class="gr"><p class="text">aside</p></div>
+        </div>
+
+        <div class="s-c">
+            <div class="bu"><p class="text">footer</p></div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
