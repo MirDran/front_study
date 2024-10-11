@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ani</title>
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+
+            animation-name: box-ani2;
+            animation-duration: 3s;
+            animation-delay: 2s;
+            /* animation-fill-mode: forwards;  100% 에서 멈춤*/
+            /* animation-fill-mode: backwards; 0% 에서 멈춘상태로 시작 */
+            animation-fill-mode: both; /* back+for 합친 상태 애니메이션 만 보여줌 */
+            animation-iteration-count: infinite; /* 반복 횟수 무한은 infinite */
+            /* animation-play-state: paused; 일시정지 */
+            animation-play-state: running; /*실행*/
+            animation-direction: alternate;
+        }
+
+        .box:hover{
+            animation-play-state: paused;
+        }
+
+        @keyframes box-ani{
+            0%{
+                background-color: red;
+                width: 100px;
+            }
+            50%{
+                background-color: green;
+                width: 300px;
+            }
+            100%{
+                background-color: blue;
+                width: 500px;
+            }
+
+            
+        }
+
+        @keyframes box-ani2{
+            0%{
+                background-color: red;
+                width: 100px;
+            }
+            25%{
+                background-color: rgb(221, 38, 175);
+                width: 300px;
+            }
+            50%{
+                background-color: green;
+                width: 500px;
+            }
+            75%{
+                background-color: rgb(255, 145, 0);
+                width: 300px;
+            }
+            100%{
+                background-color: blue;
+                width: 100px;
+            }
+
+            
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>
