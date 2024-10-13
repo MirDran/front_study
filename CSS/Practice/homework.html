@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            margin: 0 auto;
+            width: 1000px;
+            height: 100%;
+        }
+
+        /* 헤더 */
+        .headerbox {
+            display: flex;
+            border: 1px solid black;
+
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .header1,
+        .header2,
+        .header3,
+        .header4,
+        .header5 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+            height: 50px;
+            cursor: pointer;
+        }
+
+        .lanbox {
+            display: flex;
+            width: 200px;
+            border: 1px solid black;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        /* 메뉴 */
+        .menu {
+            display: flex;
+            border: 1px solid black;
+
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .me1,
+        .me2,
+        .me3,
+        .me4,
+        .me5,
+        .me6,
+        .me7 {
+            display: flex;
+            height: 100px;
+            width: 150px;
+            border: 1px solid black;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        /* 광고창 */
+        .adwin {
+            position: relative;
+            display: flex;
+            height: 500px;
+            border: 1px solid black;
+
+
+            justify-content: center;
+            align-items: center;
+        }
+
+        .adblank {
+            position: absolute;
+            display: flex;
+            top: 400px;
+            left: 10px;
+            width: 150px;
+            height: 50px;
+            border: 1px solid black;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        /* 아쿠아리움 */
+
+        .main {
+            display: flex;
+            height: 50px;
+
+            border: 1px solid black;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .m-me3 {
+            cursor: pointer;
+        }
+
+        .mained {
+            display: flex;
+            height: 450px;
+
+            border: 1px solid black;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .progs {
+            display: flex;
+
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .m-img1,
+        .m-img2,
+        .m-img3 {
+            display: flex;
+            width: 248px;
+            height: 450px;
+            border: 1px solid black;
+
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+
+        .mained {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .mui1 {
+            height: 300px;
+            display: flex;
+            border: 1px solid black;
+
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .sui1,
+        .sui2,
+        .sui3,
+        .sui4,
+        .sui5,
+        .sui6,
+        .sui7,
+        .sui8,
+        .sui9 {
+            height: 48px;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid black;
+
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .ssui1,
+        .ssui2,
+        .ssui3 {
+            display: flex;
+            flex-direction: row;
+            border: 1px solid black;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* 메인2 */
+
+        .m2-img {
+            height: 500px;
+            display: flex;
+            position: relative;
+
+            border: 1px solid black;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .m2-more1 {
+            height: 30px;
+            display: flex;
+            position: absolute;
+            left: 200px;
+            bottom: 50px;
+
+            border: 1px solid black;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .m2-more2 {
+            height: 30px;
+            display: flex;
+            position: absolute;
+            left: 450px;
+            bottom: 50px;
+
+            border: 1px solid black;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .m2-more3 {
+            height: 30px;
+            display: flex;
+            position: absolute;
+            right: 200px;
+            bottom: 50px;
+
+            border: 1px solid black;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        /* 공지,sns */
+
+        .sns {
+            height: 300px;
+            display: flex;
+
+            border: 1px solid black;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .sns-fir {
+            width: 200px;
+            height: 150px;
+            display: flex;
+            border: 1px solid black;
+
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sns-mon {
+            height: 150px;
+            display: flex;
+            border: 1px solid black;
+
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .face {
+            border: 1px solid black;
+            width: 200px;
+            height: 300px;
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+        }
+
+        .insta {
+            border: 1px solid black;
+            display: flex;
+            width: 200px;
+            height: 300px;
+
+            justify-content: center;
+            align-items: center;
+        }
+
+        .snsmo {
+            width: 200px;
+            height: 300px;
+            display: flex;
+            border: 1px solid black;
+
+
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .plus2 {
+            cursor: pointer;
+        }
+
+        .momo {
+            cursor: pointer;
+        }
+
+        .tpfh0 {
+            width: 200px;
+            border: 1px solid black;
+            display: flex;
+
+            flex-direction: column;
+        }
+
+        .tpfh1,
+        .tpfh2,
+        .tpfh3 {
+            height: 80px;
+            border: 1px solid black;
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            cursor: pointer;
+        }
+
+        .footer {
+            height: 300px;
+            display: flex;
+            position: relative;
+            border: 1px solid black;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            border: 1px solid black;
+            position: absolute;
+            top: 50px;
+
+            justify-content: center;
+            align-items: center;
+        }
+
+        .soga {
+            width: 800px;
+            height: 50px;
+            display: flex;
+            border: 1px solid black;
+            position: absolute;
+            top: 50px;
+            left: 100px;
+
+            justify-content: center;
+            align-items: center;
+        }
+
+        .juso {
+            width: 600px;
+            height: 200px;
+            display: flex;
+            border: 1px solid black;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+
+            justify-content: center;
+            align-items: center;
+        }
+
+        .up-man {
+            position: absolute;
+            top: 150px;
+            height: 500px;
+            border: 1px solid black;
+            width: 1000px;
+            background-color: rgb(189, 186, 186);
+            justify-content: center;
+        }
+
+        .ztzt:hover .up-man {
+            display: flex;
+        }
+
+        .up-main2,
+        .up-main3,
+        .up-main4,
+        .up-main5,
+        .up-main6,
+        .up-main7 {
+            display: flex;
+            border: 1px solid black;
+            width: 150px;
+            background-color: aqua;
+            flex-direction: column;
+        }
+
+        .m13 {
+            display: flex;
+            border: 1px solid black;
+            background-color: aqua;
+        }
+
+        .upbox {
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+        }
+
+        .gbox {
+            border: 1px solid black;
+            display: flex;
+            background-color: aqua;
+            flex-direction: column;
+        }
+
+        .ugbox {
+            display: flex;
+        }
+
+        .m14 {
+            display: flex;
+
+        }
+
+        .m1-1,
+        .m1-2,
+        .m1-3 {
+            width: 50px;
+            display: flex;
+            border: 1px solid black;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .apsb {
+            width: 75px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+
+<div>
+
+    <div class="container">
+
+        <!--헤더-->
+        <div class="headerbox">
+            <div class="header1">
+                <div><span>롯데월드 어드벤처</span></div>
+            </div>
+            <div class="header2">
+                <div><span>롯데월드 어드벤처 부산</span></div>
+            </div>
+            <div class="header3">
+                <div><span>SEOUL SKY</span></div>
+            </div>
+            <div class="header4">
+                <div><span>롯데워터파크</span></div>
+            </div>
+            <div class="header5">
+                <div><span>롯데월드 아쿠아리움 하노이</span></div>
+            </div>
+            <div class="lanbox">
+                <span>Language</span>
+            </div>
+        </div>
+        <!--메뉴-->
+        <div class="menu">
+            <div class="me1">
+                <div><span>로고</span></div>
+            </div>
+            <div class="me2 ztzt">
+                <div><span>아쿠아리움 소개</span></div>
+            </div>
+            <div class="me3 ztzt">
+                <div><span>프로그램·이벤트</span></div>
+            </div>
+            <div class="me4 ztzt">
+                <div><span>이용안내</span></div>
+            </div>
+            <div class="me5 ztzt">
+                <div><span>온라인예매</span></div>
+            </div>
+            <div class="me6 ztzt">
+                <div><span>단체 안내</span></div>
+            </div>
+            <div class="me7 ztzt">
+                <div><span>고객소리함</span></div>
+            </div>
+        </div>
+        <!-- 광고창 -->
+        <div class="adwin">
+            <span>광고창</span>
+            <div class="adblank">
+                <p>자세히 보기 ></p>
+            </div>
+        </div>
+
+        <!-- 아쿠아리움 -->
+
+        <div class="main">
+            <div class="m-me1"><span>아쿠아리움 365</span></div>
+            <div class="m-me2"><span>주요 프로그램</span></div>
+            <div class="m-me3"><span>더보기 ＞</span></div>
+        </div>
+        <div class="mained">
+            <div class="mmui1">
+                <div class="mui1">
+                    <div><span>아쿠아리움 운영시간<br>10:00~22:00</span></div>
+                </div>
+                <div class="ssui1">
+                    <div class="sui1">
+                        <div><span>이용요금</span></div>
+                    </div>
+                    <div class="sui2">
+                        <div><span>우대정보</span></div>
+                    </div>
+                    <div class="sui3">
+                        <div><span>DIY 활동지</span></div>
+                    </div>
+                </div>
+                <div class="ssui2">
+                    <div class="sui4">
+                        <div><span>층별안내</span></div>
+                    </div>
+                    <div class="sui5">
+                        <div><span>단체프로그램</span></div>
+                    </div>
+                    <div class="sui6">
+                        <div><span>고객의 소리</span></div>
+                    </div>
+                </div>
+                <div class="ssui3">
+                    <div class="sui7">
+                        <div><span>교통·주차</span></div>
+                    </div>
+                    <div class="sui8">
+                        <div><span>편의시설</span></div>
+                    </div>
+                    <div class="sui9">
+                        <div><span>장애인<br>편의제도</span></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="progs"></div>
+            <div class="m-img1"><span>메인 프로 1 <br> 메인프로그램 1번입니다.</span></div>
+            <div class="m-img2"><span>메인 프로 2 <br> 메인프로그램 2번입니다.</span></div>
+            <div class="m-img3"><span>메인 프로 3 <br> 메인프로그램 3번입니다.</span></div>
+        </div>
+
+        <div class="main2">
+            <div class="m2-img">
+                <div class="m2-more1"><span>자세히 보기</span></div>
+                <div class="m2-more2"><span>자세히 보기</span></div>
+                <div class="m2-more3"><span>자세히 보기</span></div>
+            </div>
+        </div>
+
+        <!-- 공지,sns -->
+
+        <div class="sns">
+            <div class="snsmo">
+                <div class="plus"><span>공지사항 <div class="momo">더보기 ＞</div></span></div>
+                <div class="tpfh0">
+                    <div class="tpfh1"><span>공지1</span></div>
+                    <div class="tpfh2"><span>공지2</span></div>
+                    <div class="tpfh3"><span>공지3</span></div>
+                </div>
+            </div>
+            <div class="insta"><span>인스타그램</span></div>
+            <div class="face"><span>페이스북</span></div>
+            <div class="more-info">
+                <div class="sns-fir"><span>아쿠아리움<br>우대정보</span></div>
+                <div class="sns-mon"><span>아쿠아리움<br>기념상품</span></div>
+            </div>
+        </div>
+
+        <!--마지막 푸터-->
+        <div class="footer">
+            <div class="logo"><span>로고</span></div>
+            <div class="soga">
+                <div class="aua"><span>아쿠아리움 소개</span></div>
+                <div class="site"><span>사이트맵</span></div>
+                <div class="use"><span>이용약관</span></div>
+                <div class="user"><span>개인정보처리방침</span></div>
+                <div class="video"><span>영상정보처리 기기운영/관리방침</span></div>
+            </div>
+            <div class="juso"><span>이곳은 주소랑 대표자 번호 <br> 사업자 등록번호 신고번호 <br> 영어 컴퍼니 같은걸 적는 곳입니다.</span></div>
+        </div>
+
+        <!-- 오버! -->
+        <div class="up-man">
+            <div class="up-main1">
+                <div class="m13">
+                    <div class="m1-1"><span>뉴스 공지</span></div>
+                    <div class="m1-2"><span>편의 시설</span></div>
+                    <div class="m1-3"><span>사이 트맵</span></div>
+                </div>
+                <div class="m14">
+                    <div class="m1-4 ugbox">
+                        <div class="gbox">
+                            <div class="apsb ko"><span>한국</span></div>
+                            <div class="apsb en"><span>미국</span></div>
+                        </div>
+                        <div class="gbox">
+                            <div class="apsb jp"><span>일본</span></div>
+                            <div class="apsb ch"><span>중국</span></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="up-main2">
+                <div class="m2-1 upbox"><span>아쿠아리움 소개</span></div>
+                <div class="m2-2 upbox"><span>뉴스·공지</span></div>
+                <div class="m2-3 upbox"><span>홍보자료 ＋</span></div>
+                <div class="m2-4 upbox"><span>층별안내</span></div>
+                <div class="m2-4 upbox"><span>전시생물 소개</span></div>
+                <div class="m2-4 upbox"><span>아쿠아리움 사람들</span></div>
+                <div class="m2-4 upbox"><span>제휴·유관시설</span></div>
+            </div>
+            <div class="up-main3">
+                <div class="m3-1 upbox"><span>자주 묻는 질문</span></div>
+                <div class="m3-2 upbox"><span>아쿠아리움 Now ＋</span></div>
+                <div class="m3-3 upbox"><span>이벤트 ＋</span></div>
+                <div class="m3-4 upbox"><span>탐구활동지 ＋</span></div>
+            </div>
+            <div class="up-main4">
+                <div class="m4-1 upbox"><span>운영시간</span></div>
+                <div class="m4-2 upbox"><span>이용요금</span></div>
+                <div class="m4-3 upbox"><span>우대정보 ＋</span></div>
+                <div class="m4-4 upbox"><span>마린프렌즈 ＋</span></div>
+                <div class="m4-5 upbox"><span>카페·기프트샵·포토</span></div>
+                <div class="m4-6 upbox"><span>편의시설</span></div>
+                <div class="m4-7 upbox"><span>장애인 편의제도</span></div>
+                <div class="m4-8 upbox"><span>교통·주차 ＋</span></div>
+            </div>
+            <div class="up-main5">
+                <div class="m5-1 upbox"><span>이용권예매</span></div>
+                <div class="m5-2 upbox"><span>예매확인 및 취소</span></div>
+            </div>
+            <div class="up-main6">
+                <div class="m6-1 upbox"><span>단체 안내 ＋</span></div>
+                <div class="m6-2 upbox"><span>기업체 안내 ＋</span></div>
+                <div class="m6-3 upbox"><span>단체 예약</span></div>
+            </div>
+            <div class="up-main7">
+                <div class="m7-1 upbox"><span>자주 묻는 질문</span></div>
+                <div class="m7-2 upbox"><span>이용문의</span></div>
+                <div class="m7-3 upbox"><span>방문 후 칭찬·불편·건의</span></div>
+                <div class="m7-4 upbox"><span>유실물 센터</span></div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+</div>
+
+</body>
+
+</html>
