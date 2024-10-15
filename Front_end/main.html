@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            margin: 0 auto;
+            width: 500px;
+            height: 900px;
+            background-color: rgb(9, 71, 9);
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mese{
+            width: 400px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(32, 163, 32);
+            color: white;
+            font-size: large;
+
+            
+            border-radius: 10px;
+            animation-name: ani-box;
+            animation-duration: 3s;
+            animation-fill-mode: both;
+        }
+
+        @keyframes ani-box{
+            0%{
+                background-color: rgb(32, 163, 32,0);
+                color:rgb(9, 71, 9);
+            }
+            
+            100%{
+                background-color: rgb(32, 163, 32,1);
+                color: white;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="mese">
+            <p>Welcom to Webpage!</p>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container{
+            margin: 0 auto;
+            width: 500px;
+            height: 900px;
+            background-color: rgb(9, 71, 9);
+            justify-content: center;
+            align-items: center;
+        }
+        .select{
+            margin: 0 auto;
+            width: 400px;
+            height: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .sign{
+            width: 50%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+            background-color: lightgreen;
+            cursor: pointer;
+        }
+
+
+        .log{
+            width: 50%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+            background-color: gray;
+            cursor: pointer;
+        }
+
+        .title{
+            height: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        
+        .in{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .in input{
+            width: 400px;
+            margin-top: 50px;
+            background-color: rgb(9, 71, 9);
+        }
+
+        .start{
+            margin: 0 auto;
+            margin-top: 50px;
+            width: 400px;
+            height: 50px;
+            background-color: lightgreen;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            position: absolute;
+            bottom: 50px;
+            left: 435px;
+        }
+
+        .sign a{
+            text-decoration: none;
+            color: white;
+        }
+        .log a{
+            text-decoration: none;
+            color: lightgray;
+        }
+
+        
+    </style>
+
+</head>
+<body>
+    
+
+    <div class="container">
+        <div class="select">
+            <button class="sign"><a href="signup.html"><p>Sign Up</p></button></a>
+            <button class="log"><a href="login.html"><p>Log In</p></button></a>
+        </div>
+        <div class="title"><h1>Sing Up for Free</h1></div>
+        <div class="in">
+            <input type="email" placeholder="Email Address *">
+            <input type="password" placeholder="Set A Password *">
+            <input type="password" placeholder="Confirm A Password *">
+        </div>
+        <button class="start"><h2>GET STARTED</h2></button>
+    </div>
+
+</body>
+</html>
