@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .bg-red{
+            background-color: red;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <p>글자</p>
+    </div>
+
+    <div class="container">
+        <div class="box a" id="box-a-id">A</div>
+        <div class="box b">B</div>
+        <div class="box c">C</div>
+    </div>
+
+    <p id="target">text<span style="display: none;">hidden</span></p>
+
+    <script>
+
+        let cup= '콜라'; //변하는 값
+        cup = '맥주';
+        cup = '음료수';
+
+        const boxA = document.getElementById('box-a-id'); //변하지 않는 값
+
+        console.log(boxA);
+
+        document.getElementById('box-a-id');        //id인 아이를 찾는걸 선언한거라 #을 안붙임
+        document.getElementsByClassName('.box');    //클래스 라서 . 붙임
+        document.querySelector('#box-a-id');        //찾는지만 선언이 안되어 잇ㅎ어서 ID #을 붙임
+        document.querySelectorAll('.container');    // 클래스 라서 . 붙임
+
+        const div_target =  document.getElementById('target');
+        console.log(div_target.textContent);
+        console.log(div_target.innerText);
+        console.log(div_target.innerHTML);
+
+
+        document.getElementById('target').textContent = 'textContent Write 작성'; //모든 텍스트
+        document.getElementById('target').innerText = 'innertext Write 작성'; //웹브 텍스트 (히든 안보임)
+        document.getElementById('target').innerHTML = 'innerHTML Write 작성'; //HTML 포함 텍스트
+
+        div_target.style.color = "#ccaaca";
+
+        document.querySelector('#box-a-id').classList.add('bg-red')
+
+
+    </script>
+</body>
+</html>
