@@ -36,7 +36,7 @@
         console.log(boxA);
 
         document.getElementById('box-a-id');        //id인 아이를 찾는걸 선언한거라 #을 안붙임
-        document.getElementsByClassName('.box');    //클래스 라서 . 붙임
+        document.getElementsByClassName('box');    
         document.querySelector('#box-a-id');        //찾는지만 선언이 안되어 잇ㅎ어서 ID #을 붙임
         document.querySelectorAll('.container');    // 클래스 라서 . 붙임
 
@@ -47,13 +47,16 @@
 
 
         document.getElementById('target').textContent = 'textContent Write 작성'; //모든 텍스트
+        //<p id="target">text<span style="display: none;">hidden</span></p> 에서 texthidden
         document.getElementById('target').innerText = 'innertext Write 작성'; //웹브 텍스트 (히든 안보임)
+        // <p id="target">text<span style="display: none;">hidden</span></p> 에서 text
         document.getElementById('target').innerHTML = 'innerHTML Write 작성'; //HTML 포함 텍스트
+        // text<span style="display: none;">hidden</span> 으로 보임 (타겟 제오로 보임)
 
-        div_target.style.color = "#ccaaca";
+        div_target.style.color = "#ccaaca"; // 타겟 색상
 
         document.querySelector('#box-a-id').classList.add('bg-red')
-
+        // bg-red 라는 [클래스]를 [추가]
 
     </script>
 </body>
