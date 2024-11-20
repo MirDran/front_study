@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .red{
+            color : red;
+        }
+
+        .blue{
+            color : blue;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <p id="pid">texttexttext</p>
+
+    <a id="aid" href="https://www.naver.com">네이버 링크</a>
+
+    <div id="container">
+
+    </div>
+
+    <p id="target"></p>
+
+
+
+    <script>
+        // document.getElementById('pid').style.color='green';
+        document.getElementById('pid').classList.add('red'); 
+        //add 추가
+        document.getElementById('pid').classList.add('blue');  
+        document.getElementById('pid').classList.remove('blue');
+        //remove 삭제  
+        //toggle 반복 true/false 반복 하여 true시 실행 false시 삭제
+        //반복함 document.getElementById('pid').classList.toggle('red') 
+        
+        const aEle = document.querySelector('#aid');
+        console.log(aEle.getAttribute('href'));
+        aEle.setAttribute('href', "https://netflix.com");
+        aEle.setAttribute('target','_blank');
+
+        //aEle color red
+        aEle.style.color = 'red';
+        aEle.classList.add('red');          
+        //add class = '값' 에 red를 추가
+        aEle.setAttribute('class','red');   
+        // class 값 자체를 red 덮어쓰기
+        aEle.removeAttribute('target');
+
+
+        const newEle = document.createElement("p");
+        // <p> 태그 생성
+        const divCon = document.getElementById('container');
+        //콘테이너 아이디를 divCon에 대입
+        divCon.appendChild(newEle);
+        //콘테이너에 p엘리멘트를 자식으로 추가
+
+        const txtEle = document.createTextNode('p태그안에 text');
+        // 텍스트 생성
+        newEle.appendChild(txtEle);
+        //p 엘리멘티 안에 텍스트 노드를 자식으로 추가
+
+        const attEle = document.createAttribute("class");
+        //속성 노드  클래스라는 속성을 넣을 것이다.
+        attEle.value = "blue";
+        //class 밸류에 blue를 넣음
+        newEle.setAttributeNode(attEle); 
+        // P-> 속성 추가
+
+        document.getElementById('target').innerHTML =
+        "<strong>p target text</strong>";
+
+        //createElement("strong")
+        //createTextNode("p target text")
+        //ele.appendChild(text);
+        //target.appendChild(ele)
+
+        //jQuery 라이브러리 활용, react 작성방식 나중에 배움
+
+        //노드 삭제
+        // document.getElementById('target')
+        // .removeChile(document.querySelector('strong'))
+        //각 따로 찾고 삭제
+
+        // document.getElementById('target')
+        // .removeChile(document.getElementById('target').firstChild)
+        //부모에서 첫번째 자식 삭제
+
+        // document.querySelector('strong').parentNode
+        // .removeChile(document.querySelector('strong'))
+        //자식에서 부모를 찾고 자식 삭제
+
+    </script>
+
+</body>
+</html>
