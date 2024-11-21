@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+
+<style>
+/* 필요시 작성 */
+
+.gray{
+    background-color: gray;
+}
+
+.red{
+    color: red;
+}
+
+.white{
+    background-color: white;
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+<div id="main">
+<p id="p1">p1 텍스트</p>
+<p id="p2">p2 텍스트</p>
+</div>
+</div>
+<button onclick="changeMain()">main 배경색 gray로 변경</button>
+<button onclick="changeP1()">p1 글자색 red로 변경</button>
+<button onclick="changeP2()">"p2 텍스트"를 "p2 글자" 로 변경</button>
+
+<button onclick="changeMain2()">main 배경색 white</button>
+<button onclick="changerollback()">p1 글자 black</button>
+
+<button onclick="changeMainre()">main 배경색 gray 반복</button>
+<button onclick="changep1re()">p1 글자색 red 반복</button>
+
+<button onclick="changeP2T()">"p2 텍스트"를 "p2글자" 변경 및 반복</button>
+
+
+<script>
+/* 코드 작성 부분 */
+
+const main_Id = document.getElementById('main');
+const p1_Id = document.querySelector('#p1');
+const p2_Id = document.querySelector('#p2');
+
+function changeMain(){
+    // document.querySelector('#main').setAttribute('class','gray');
+    // document.getElementById('main').style.backgroundColor = 'gray';
+    main_Id.classList.remove('white');
+    main_Id.classList.add('gray');
+    // main_Id.classList.toggle('gray');
+}
+
+function changeP1(){
+    p1_Id.classList.remove('black');
+    p1_Id.classList.add('red');
+    // document.getElementById('p1').style.color('red');
+    // document.getElementById('p1').classList('red');
+}
+
+function changeP2(){
+    // document.querySelector('#p2').replaceChildren('p2 글자');
+    document.querySelector('#p2').textContent = 'p2 글자';
+}
+
+function changeMain2(){
+    //배경색 다시 화이트
+    main_Id.classList.remove('gray');
+    main_Id.classList.add('white');
+
+    
+}
+
+function changerollback(){
+    //글자색 다시 검정색
+    p1_Id.classList.remove('red');
+    p1_Id.classList.add('black');
+}
+
+function changeMainre(){
+    //배경 그레이 반복
+    main_Id.classList.remove('white'); // 다른 것 선택 후 제거용
+    main_Id.classList.toggle('gray');
+    
+}
+
+function changep1re(){
+    //글자색 레드 반복
+    p1_Id.classList.remove('black');
+    p1_Id.classList.toggle('red');
+}
+
+let idx = 1;
+
+function changeP2T(){
+    const textArr = ['p2 텍스트','p2 하나','p2 둘','p2 셋']
+    idx++;
+    if(idx == textArr.length){
+        idx = 0;
+    }
+    p2_Id.textContent = textArr[idx];
+
+    //글자 반복
+    // if(p2_Id.textContent == 'p2 텍스트'){
+    //     p2_Id.textContent = 'p2 하나';
+    // }else if(p2_Id.textContent == 'p2 하나'){
+    //     p2_Id.textContent = 'p2 둘';
+    // }else if(p2_Id.textContent == 'p2 둘'){
+    //     p2_Id.textContent = 'p2 셋';
+    // }else if(p2_Id.textContent == 'p2 셋'){
+    //     p2_Id.textContent = 'p2 텍스트';
+    // }
+}
+
+
+</script>
+</body>
+</html>
