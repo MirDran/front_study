@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <!-- <h1 id="moon">달식당 좋아요 ♡</h1><h1 id="count">0</h1> -->
+    <p>달식당 <sapn onclick=increseCnt()>좋아요 ♡</sapn><span id="cnt">0</span></p>
+</div>
+    <script>
+
+        let cnt = 0;
+
+        function increseCnt(){
+            cnt++; //숫자 1식 증가
+            document.getElementById('cnt').textContent = cnt;
+        }
+
+
+
+
+
+// let numAdd = 0;
+
+// const rstCount = document.getElementById('count');
+// const rstmoon = document.getElementById('moon');
+
+
+
+// rstmoon.addEventListener('click',()=>{
+
+//     numAdd++ ;
+//     rstCount.replaceChildren(numAdd);
+
+// })
+//     </script>
+
+</body>
+</html>
